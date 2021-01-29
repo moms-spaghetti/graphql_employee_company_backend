@@ -17,10 +17,15 @@ I originally wrote this using json-server during testing to answer api calls for
 
 ## Updates
 
-(29.01.21)
+(28.01.21)
 
 - In the processs of implementing a react frontend utilising react hook available in Apollo.
 - Added Apollo cache updates to optimistically update UI for employee deletions
+
+(29.01.21)
+
+- added employees and companies form
+- added cache updates for users and companies
 
 <br/>
 

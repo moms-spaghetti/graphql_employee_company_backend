@@ -89,6 +89,7 @@ const mutation = new GraphQLObjectType({
       resolve(parent, args) {
         const newEmployee = new employees({
           ...args,
+          name: args.name.toLowerCase(),
         });
         return newEmployee.save();
       },
@@ -111,7 +112,11 @@ const mutation = new GraphQLObjectType({
         companyId: { type: GraphQLString },
       },
       resolve(parent, args) {
-        return employees.findByIdAndUpdate(args.id, args, { new: true });
+        return employees.findByIdAndUpdate(
+          args.id,
+          { ...args, name: args.name.toLowerCase() },
+          { new: true }
+        );
       },
     },
     addCompany: {
@@ -123,6 +128,7 @@ const mutation = new GraphQLObjectType({
       resolve(parent, args) {
         const newCompany = new companies({
           ...args,
+          name: args.name.toLowerCase(),
         });
         return newCompany.save();
       },
@@ -144,7 +150,11 @@ const mutation = new GraphQLObjectType({
         totalEmployees: { type: GraphQLInt },
       },
       resolve(parent, args) {
-        return companies.findByIdAndUpdate(args.id, args, { new: true });
+        return companies.findByIdAndUpdate(
+          args.id,
+          { ...args, name: args.name.toLowerCase() },
+          { new: true }
+        );
       },
     },
   }),

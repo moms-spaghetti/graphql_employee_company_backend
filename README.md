@@ -48,9 +48,10 @@ Clone the repo as instructed below and download npm modules.
 
 ## Prerequisites
 
-Download and install npm modules.
-An auth0 account.
-A .env.local file in the root folder
+Download and install npm modules.\
+A mongodb database\
+A .env.local file in the root folder of the frontend\
+A .env file in the root of the backend folder
 <br/><br/>
 
 ## Installation

@@ -12,7 +12,7 @@ First attempt using GraphQL unaided. Intended to show tables of employees and co
 
 ## Details
 
-I originally wrote this using json-server during testing to answer api calls for data from the backend using the GraphiQL interface. Once I implemented a sufficient schema with requests for all/single employees/companies and mutations to allow adding, updating and deleting of both, I switched from the local json-server data to a remote mongo database with identical collections.\
+I originally wrote this using json-server during testing to answer api calls for data from the backend using the GraphiQL interface. Once I implemented a sufficient schema with requests for all/single employees/companies and mutations to allow adding, updating and deleting of both, I refactored the app to utilise a remote mongo database with identical collections.\
 <br/>
 
 ## Updates

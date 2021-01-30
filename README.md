@@ -1,8 +1,6 @@
 # GraphQL Employee Company
 
-WORK IN PROGRESS!\
-Currently adding frontend functionality.\
-First attempt using GraphQL unaided. Intended to show tables of employees and companies using GraphQL, Apollo and Express.\
+First attempt using GraphQL unaided. Displays two tables of employees and companies and two forms to add new employees and companies. Uses GraphQL, Apollo and Express. \
 <br/>
 [View Demo](https://moms-spaghetti-graphqlemployeecompany.netlify.app/)\
 <br/>
@@ -13,20 +11,7 @@ First attempt using GraphQL unaided. Intended to show tables of employees and co
 ## Details
 
 I originally wrote this using json-server during testing to answer api calls for data from the backend using the GraphiQL interface. Once I implemented a sufficient schema with requests for all/single employees/companies and mutations to allow adding, updating and deleting of both, I refactored the app to utilise a remote mongo database with identical collections.\
-<br/>
-
-## Updates
-
-(28.01.21)
-
-- In the processs of implementing a react frontend utilising react hook available in Apollo.
-- Added Apollo cache updates to optimistically update UI for employee deletions
-
-(29.01.21)
-
-- added employees and companies form
-- added cache updates for users and companies
-
+Currently, functionality displays current employees and companies in two tables. Two forms enable adding new users and companies. Uses Apollo hooks for a modern React implementation and utilises Apollo caching to dynamically update cache data when adding / deleting employees and companies. Includes check against Apollo cache when deleting a company for any users still linked to the company. If users are linked, delete process is cancelled.  
 <br/>
 
 ## Built With
@@ -113,8 +98,7 @@ Backend
 
 ## Usage
 
-As this is a work in progress only viewer and deleting of users is possible. More to follow.\
-Data can be added to the mongo database by accessing http://localhost:4000/graphql and using mutations.
+View users and companies on the two tables. Add new users and new companies from the two forms. If a company still has linked users when attempting to delete, an alert will be shown and the deletion process will be cancelled.
 <br/><br/>
 
 ## Contact
